@@ -49,14 +49,13 @@ class TopSquares(pygame.sprite.Sprite):
 
         buttons = pygame.mouse.get_pressed()
 
-        if pygame.sprite.spritecollide(self, mouse_group, False):  # changes cover tile when holding left mouse
-            if buttons == left:
-                pass
+        if pygame.sprite.spritecollide(self, mouse_group, False):  # check for collision between mouse and top tile
+            events.collide_mouse_cover = True
 
         for event in events.event_list:  # kills cover tile upon release mouse
             if event.type == pygame.MOUSEBUTTONUP:
                 if abs(self.rect.x + 15 - x_pos) < 15 and abs(self.rect.y + 15 - y_pos) < 15:
                     self.kill()
-                if pygame.sprite.spritecollide(self, mouse_group, False, False):
-                    print('test')
+
+
 

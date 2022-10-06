@@ -17,6 +17,7 @@ grey_3 = (50, 50, 50)
 white = (255, 255, 255)
 black = (0, 0, 0)
 
+top_grid = []
 full_grid = []
 counter = 0
 

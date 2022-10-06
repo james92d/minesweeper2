@@ -23,13 +23,18 @@ def main():
                 run = False
 
         drawBackground()
-        bottom_square_group.update()
+
         bottom_square_group.draw(window)
+
         cover_tiles_group.update()
+        bottom_square_group.update()
+        events.collide_mouse_cover = False
         cover_tiles_group.draw(window)
         mouse_group.update()
         # mouse_group.draw(window)
         pygame.display.update()
+
+
 
 
 if __name__ == "__main__":

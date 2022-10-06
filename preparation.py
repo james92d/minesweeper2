@@ -80,7 +80,7 @@ def createGrid():  # Create the full background grid of the game
 
 
 def createCoverTiles():
-    top_grid = []
+
     for i in range(1, columns + 1):  # generating tiles to cover lower grid
         for j in range(1, rows + 1):
             top_grid.append([i, j, 'top'])

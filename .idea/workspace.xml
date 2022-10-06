@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1292bba5-a430-440e-bc01-5b75f3f2eacd" name="Changes" comment="fixed the drawing problem">
-      <change afterPath="$PROJECT_DIR$/topsquares.py" afterDir="false" />
+    <list default="true" id="1292bba5-a430-440e-bc01-5b75f3f2eacd" name="Changes" comment="two separate classes for squares">
+      <change beforePath="$PROJECT_DIR$/bottomsquares.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottomsquares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cfg.py" beforeDir="false" afterPath="$PROJECT_DIR$/cfg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clearempty.py" beforeDir="false" afterPath="$PROJECT_DIR$/clearempty.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/events.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/preparation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/squares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/topsquares.py" beforeDir="false" afterPath="$PROJECT_DIR$/topsquares.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665060743737</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="two separate classes for squares">
+      <created>1665064759764</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665064759764</updated>
+    </task>
+    <task id="LOCAL-00005" summary="two separate classes for squares">
+      <created>1665064771969</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665064771969</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fixed the drawing problem" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed the drawing problem" />
+    <MESSAGE value="two separate classes for squares" />
+    <option name="LAST_COMMIT_MESSAGE" value="two separate classes for squares" />
   </component>
 </project>
