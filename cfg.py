@@ -18,7 +18,7 @@ white = (255, 255, 255)
 black = (0, 0, 0)
 
 full_grid = []
-# event_list = []
+counter = 0
 
 window = pygame.display.set_mode((window_width, window_height))
 pygame.display.set_caption(name)
@@ -27,5 +27,3 @@ bottom_square_group = pygame.sprite.Group()
 cover_tiles_group = pygame.sprite.Group()
 clicking_square_group = pygame.sprite.Group()
 mouse_group = pygame.sprite.Group()
-
-counter = 0

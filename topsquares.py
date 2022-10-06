@@ -1,8 +1,8 @@
-import pygame
 from cfg import *
+import events
 
 
-class Squares(pygame.sprite.Sprite):
+class TopSquares(pygame.sprite.Sprite):
 
     def __init__(self, x, y, item):
         pygame.sprite.Sprite.__init__(self)
@@ -49,19 +49,14 @@ class Squares(pygame.sprite.Sprite):
 
         buttons = pygame.mouse.get_pressed()
 
-        # if buttons == left and abs(self.rect.x + 15 - x_pos) < 15 and abs(self.rect.y + 15 - y_pos) < 15:
-        #     self.kill()
-        #     print('test')
-        #     print(len(cover_tiles_group))
+        if pygame.sprite.spritecollide(self, mouse_group, False):  # changes cover tile when holding left mouse
+            if buttons == left:
+                pass
 
-        if pygame.sprite.spritecollide(self, mouse_group, False):
-            self.kill()
-            print('kill')
+        for event in events.event_list:  # kills cover tile upon release mouse
+            if event.type == pygame.MOUSEBUTTONUP:
+                if abs(self.rect.x + 15 - x_pos) < 15 and abs(self.rect.y + 15 - y_pos) < 15:
+                    self.kill()
+                if pygame.sprite.spritecollide(self, mouse_group, False, False):
+                    print('test')
 
-        # counter = 0
-        #
-        # if buttons == right:
-        #     for obj in cover_tiles_group:
-        #         self.kill()
-        #         counter += 1
-        #         print('counter : ', counter)

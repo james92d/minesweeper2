@@ -2,7 +2,8 @@ from cfg import *
 import random
 
 from mouse import Mouse
-from squares import Squares
+from topsquares import TopSquares
+from bottomsquares import BottomSquares
 
 
 def drawBackground():
@@ -74,7 +75,7 @@ def createGrid():  # Create the full background grid of the game
         y = full_grid[i][1]
         z = full_grid[i][2]
         if z != 'wall':
-            square = Squares(square_plus2 * x + 1, square_plus2 * y + 1, z)
+            square = BottomSquares(square_plus2 * x + 1, square_plus2 * y + 1, z)
             bottom_square_group.add(square)
 
 
@@ -89,7 +90,7 @@ def createCoverTiles():
         y = top_grid[i][1]
         z = top_grid[i][2]
 
-        square = Squares(square_plus2 * x + 1, square_plus2 * y + 1, z)
+        square = TopSquares(square_plus2 * x + 1, square_plus2 * y + 1, z)
         cover_tiles_group.add(square)
 
 
