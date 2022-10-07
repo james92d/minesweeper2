@@ -1,4 +1,4 @@
-import pygame
+from cfg import *
 
 
 class Mouse(pygame.sprite.Sprite):

@@ -2,12 +2,13 @@ from cfg import *
 import events
 
 from preparation import drawBackground
-from preparation import createCoverTiles
+from preparation import createOriginalTopGrip
 from preparation import createGrid
 from preparation import createMouseSprite
+from preparation import remakeCoverTilesGroup
 
 createGrid()
-createCoverTiles()
+createOriginalTopGrip()
 createMouseSprite()
 
 
@@ -23,20 +24,15 @@ def main():
                 run = False
 
         drawBackground()
-
         bottom_square_group.draw(window)
-
         cover_tiles_group.update()
         bottom_square_group.update()
         events.collide_mouse_cover = False
+        remakeCoverTilesGroup()
         cover_tiles_group.draw(window)
         mouse_group.update()
-        # mouse_group.draw(window)
         pygame.display.update()
-
-
 
 
 if __name__ == "__main__":
     main()
-

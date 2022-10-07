@@ -1,6 +1,10 @@
 from cfg import *
 import events
 
+from funcs import deleteFromTopGrid
+from funcs import convertPixelsToRowCols
+from funcs import killSurroundingEmptyTiles
+
 
 class TopSquares(pygame.sprite.Sprite):
 
@@ -39,23 +43,16 @@ class TopSquares(pygame.sprite.Sprite):
 
     def update(self):
 
-        left = (True, False, False)
-        right = (False, False, True)
-        both = (True, False, True)
-
         mouse_pos = pygame.mouse.get_pos()
         x_pos = mouse_pos[0]
         y_pos = mouse_pos[1]
 
-        buttons = pygame.mouse.get_pressed()
-
-        if pygame.sprite.spritecollide(self, mouse_group, False):  # check for collision between mouse and top tile
-            events.collide_mouse_cover = True
-
         for event in events.event_list:  # kills cover tile upon release mouse
             if event.type == pygame.MOUSEBUTTONUP:
                 if abs(self.rect.x + 15 - x_pos) < 15 and abs(self.rect.y + 15 - y_pos) < 15:
-                    self.kill()
+                    x, y = convertPixelsToRowCols(self.rect.x, self.rect.y)
+                    deleteFromTopGrid(x, y)
 
-
-
+                    item = [x, y, '0']
+                    if item in full_grid:
+                        killSurroundingEmptyTiles(x, y)

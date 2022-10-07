@@ -79,16 +79,19 @@ def createGrid():  # Create the full background grid of the game
             bottom_square_group.add(square)
 
 
-def createCoverTiles():
-
+def createOriginalTopGrip():
     for i in range(1, columns + 1):  # generating tiles to cover lower grid
         for j in range(1, rows + 1):
             top_grid.append([i, j, 'top'])
 
-    for i in range(0, columns * rows):  # generate squares into group for blit for j in range(1, rows + 1):
-        x = top_grid[i][0]
-        y = top_grid[i][1]
-        z = top_grid[i][2]
+
+def remakeCoverTilesGroup():
+    cover_tiles_group.empty()
+
+    for i in top_grid:
+        x = i[0]
+        y = i[1]
+        z = i[2]
 
         square = TopSquares(square_plus2 * x + 1, square_plus2 * y + 1, z)
         cover_tiles_group.add(square)
