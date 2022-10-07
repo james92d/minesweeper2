@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1292bba5-a430-440e-bc01-5b75f3f2eacd" name="Changes" comment="automatic field clearing working">
+    <list default="true" id="1292bba5-a430-440e-bc01-5b75f3f2eacd" name="Changes" comment="automatic field clearing working, small bug">
       <change beforePath="$PROJECT_DIR$/funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/preparation.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665157847911</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="automatic field clearing working, small bug">
+      <created>1665158273803</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1665158273803</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,6 +159,7 @@
     <MESSAGE value="two separate classes for squares" />
     <MESSAGE value="progress on recursive clearing of cove tiles" />
     <MESSAGE value="automatic field clearing working" />
-    <option name="LAST_COMMIT_MESSAGE" value="automatic field clearing working" />
+    <MESSAGE value="automatic field clearing working, small bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="automatic field clearing working, small bug" />
   </component>
 </project>

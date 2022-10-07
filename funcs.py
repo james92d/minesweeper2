@@ -30,7 +30,7 @@ def killSurroundingNumberedTiles(x, y):
                  [x + 1, y - 1, str(e)],
                  [x + 1, y, str(e)],
                  [x + 1, y + 1, str(e)]]
-        print(items)
+
         for i in items:
             if i in full_grid:
                 j = [i[0], i[1], 'top']
@@ -48,14 +48,14 @@ def killSurroundingEmptyTiles(x, y):
              [x + 1, y, 'top'],
              [x + 1, y + 1, 'top']]
 
-    for item in items:
-        x = item[0]
-        y = item[1]
+    for i in items:
+        x = i[0]
+        y = i[1]
 
-        item2 = [x, y, '0']
+        j = [x, y, '0']
 
-        if item in top_grid:
-            if item2 in full_grid:
-                top_grid.remove(item)
+        if i in top_grid:
+            if j in full_grid:
+                top_grid.remove(i)
                 killSurroundingNumberedTiles(x, y)
                 killSurroundingEmptyTiles(x, y)
