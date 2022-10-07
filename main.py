@@ -27,7 +27,6 @@ def main():
         bottom_square_group.draw(window)
         cover_tiles_group.update()
         bottom_square_group.update()
-        events.collide_mouse_cover = False
         remakeCoverTilesGroup()
         cover_tiles_group.draw(window)
         mouse_group.update()

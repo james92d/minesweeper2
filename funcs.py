@@ -51,7 +51,6 @@ def killSurroundingEmptyTiles(x, y):
     for item in items:
         x = item[0]
         y = item[1]
-        z = item[2]
 
         item2 = [x, y, '0']
 

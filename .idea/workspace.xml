@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1292bba5-a430-440e-bc01-5b75f3f2eacd" name="Changes" comment="progress on recursive clearing of cover tiles">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bottomsquares.py" beforeDir="false" afterPath="$PROJECT_DIR$/bottomsquares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clearempty.py" beforeDir="false" />
+    <list default="true" id="1292bba5-a430-440e-bc01-5b75f3f2eacd" name="Changes" comment="automatic field clearing working">
+      <change beforePath="$PROJECT_DIR$/funcs.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mouse.py" beforeDir="false" afterPath="$PROJECT_DIR$/mouse.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preparation.py" beforeDir="false" afterPath="$PROJECT_DIR$/preparation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/topsquares.py" beforeDir="false" afterPath="$PROJECT_DIR$/topsquares.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +114,28 @@
       <option name="project" value="LOCAL" />
       <updated>1665074136728</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="automatic field clearing working">
+      <created>1665157788852</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1665157788852</updated>
+    </task>
+    <task id="LOCAL-00008" summary="automatic field clearing working">
+      <created>1665157795493</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1665157795493</updated>
+    </task>
+    <task id="LOCAL-00009" summary="automatic field clearing working">
+      <created>1665157847911</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1665157847911</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +153,7 @@
     <MESSAGE value="fixed the drawing problem" />
     <MESSAGE value="two separate classes for squares" />
     <MESSAGE value="progress on recursive clearing of cove tiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="progress on recursive clearing of cove tiles" />
+    <MESSAGE value="automatic field clearing working" />
+    <option name="LAST_COMMIT_MESSAGE" value="automatic field clearing working" />
   </component>
 </project>
