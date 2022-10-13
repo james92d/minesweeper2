@@ -97,6 +97,12 @@ def remakeCoverTilesGroup():
         cover_tiles_group.add(square)
 
 
+def addFlagToTopGrid(x, y):
+
+    square = TopSquares(x, y, 'flag')
+    top_grid.append(square)
+
+
 def createMouseSprite():
     mouse = Mouse(15, 15)
     mouse_group.add(mouse)

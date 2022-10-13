@@ -6,7 +6,7 @@ columns = 30
 rows = 24
 num_of_mines = 99
 square_size = 30
-square_plus2 = square_size + 2
+square_plus2 = square_size + 1
 
 window_height = (2 + rows) * square_plus2
 window_width = (2 + columns) * square_plus2
@@ -19,6 +19,7 @@ black = (0, 0, 0)
 
 top_grid = []
 full_grid = []
+covers_of_zeros = []
 counter = 0
 
 window = pygame.display.set_mode((window_width, window_height))

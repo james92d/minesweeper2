@@ -3,7 +3,8 @@ import events
 
 from funcs import deleteFromTopGrid
 from funcs import convertPixelsToRowCols
-from funcs import killSurroundingEmptyTiles
+from funcs import ClearSurroundingEmptyTiles
+from funcs import ClearNumberedTiles
 
 
 class TopSquares(pygame.sprite.Sprite):
@@ -48,11 +49,37 @@ class TopSquares(pygame.sprite.Sprite):
         y_pos = mouse_pos[1]
 
         for event in events.event_list:  # kills cover tile upon release mouse
-            if event.type == pygame.MOUSEBUTTONUP:
-                if abs(self.rect.x + 15 - x_pos) < 15 and abs(self.rect.y + 15 - y_pos) < 15:
+            if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
+                if abs(self.rect.x + 15 - x_pos) <= 15 and abs(self.rect.y + 15 - y_pos) <= 15:
+
+                    if self.item == 'flag':
+                        continue
+
+                    else:
+                        x, y = convertPixelsToRowCols(self.rect.x, self.rect.y)
+                        deleteFromTopGrid(x, y)
+
+                        tile = [x, y, '0']
+
+                        if tile in full_grid:
+                            ClearSurroundingEmptyTiles(x, y)
+                            ClearNumberedTiles()
+
+            if event.type == pygame.MOUSEBUTTONUP and event.button == 3:
+                if abs(self.rect.x + 15 - x_pos) <= 15 and abs(self.rect.y + 15 - y_pos) <= 15:
                     x, y = convertPixelsToRowCols(self.rect.x, self.rect.y)
+                    z = self.item
                     deleteFromTopGrid(x, y)
 
-                    item = [x, y, '0']
-                    if item in full_grid:
-                        killSurroundingEmptyTiles(x, y)
+                    if z == 'top':
+                        tile = [x, y, 'flag']
+                        top_grid.append(tile)
+
+                    if z == 'flag':
+                        tile = [x, y, 'top']
+                        top_grid.append(tile)
+
+
+
+
+
