@@ -5,6 +5,7 @@ from funcs import deleteFromTopGrid
 from funcs import convertPixelsToRowCols
 from funcs import ClearSurroundingEmptyTiles
 from funcs import ClearNumberedTiles
+from funcs import ClearSurroundingTiles
 
 
 class BottomSquares(pygame.sprite.Sprite):
@@ -48,21 +49,24 @@ class BottomSquares(pygame.sprite.Sprite):
         y = self.rect.y
         z = self.item
 
-        surrounding_tiles = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        x, y = convertPixelsToRowCols(x, y)
 
-        surrounding_tiles[1] = [x - 1, y - 1, 'flag']
-        surrounding_tiles[2] = [x - 1, y, 'flag']
-        surrounding_tiles[3] = [x - 1, y + 1, 'flag']
-        surrounding_tiles[4] = [x, y - 1, 'flag']
-        surrounding_tiles[5] = [x, y + 1, 'flag']
-        surrounding_tiles[6] = [x + 1, y - 1, 'flag']
-        surrounding_tiles[7] = [x + 1, y, 'flag']
-        surrounding_tiles[8] = [x + 1, y + 1, 'flag']
+        surrounding_tiles = [0, 0, 0, 0, 0, 0, 0, 0]
+
+        surrounding_tiles[0] = [x - 1, y - 1, 'flag']
+        surrounding_tiles[1] = [x - 1, y, 'flag']
+        surrounding_tiles[2] = [x - 1, y + 1, 'flag']
+        surrounding_tiles[3] = [x, y - 1, 'flag']
+        surrounding_tiles[4] = [x, y + 1, 'flag']
+        surrounding_tiles[5] = [x + 1, y - 1, 'flag']
+        surrounding_tiles[6] = [x + 1, y, 'flag']
+        surrounding_tiles[7] = [x + 1, y + 1, 'flag']
 
         counter1 = 0
 
-        for i in range(1, 9):
+        for i in range(8):
             if surrounding_tiles[i] in top_grid:
+                # print(surrounding_tiles[i], '\n')
                 counter1 += 1
 
         j = [x, y, z]
@@ -74,10 +78,11 @@ class BottomSquares(pygame.sprite.Sprite):
         for event in events.event_list:
             if event.type == pygame.MOUSEBUTTONUP and event.button == 1:
                 if abs(self.rect.x + 15 - x_pos) <= 15 and abs(self.rect.y + 15 - y_pos) <= 15:
-                    print('test')
-                    # if counter == str(self.item):
-                        # Kill surrounding tiles
-                        # print('test')
+                    print(f'self.item = : {self.item}')
+                    print(f'counter1 = : {counter1}')
+                    if counter1 != 0 and counter1 == int(self.item):
+                        ClearSurroundingTiles(x, y)
+                        print('test')
 
 
 

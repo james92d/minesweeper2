@@ -24,13 +24,13 @@ def main():
                 run = False
 
         drawBackground()
+        mouse_group.update()
         bottom_square_group.update()
         bottom_square_group.draw(window)
         cover_tiles_group.update()
         bottom_square_group.update()
         remakeCoverTilesGroup()
         cover_tiles_group.draw(window)
-        mouse_group.update()
         pygame.display.update()
 
 

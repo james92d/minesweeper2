@@ -66,3 +66,29 @@ def ClearNumberedTiles():
         for i in range(1, 9):
             if surrounding_tiles[i] in top_grid:
                 top_grid.remove(surrounding_tiles[i])
+
+
+def ClearSurroundingTiles(x, y):
+
+    surrounding_tiles = [[x - 1, y - 1],
+                         [x - 1, y],
+                         [x - 1, y + 1],
+                         [x, y - 1],
+                         [x, y + 1],
+                         [x + 1, y - 1],
+                         [x + 1, y],
+                         [x + 1, y + 1]]
+
+    for tile in surrounding_tiles:
+        a = tile[0]
+        b = tile[1]
+        top_tile = [a, b, 'top']
+        zero_tile = [a, b, '0']
+
+        if top_tile in top_grid:
+            top_grid.remove(top_tile)
+            if zero_tile in full_grid:
+                cover = [a, b, 'top']
+                covers_of_zeros.append(cover)
+                ClearSurroundingEmptyTiles(a, b)
+                ClearNumberedTiles()

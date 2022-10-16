@@ -1,7 +1,7 @@
 import pygame
 
 name = "Minesweeper"
-fps = 120
+fps = 60
 columns = 30
 rows = 24
 num_of_mines = 99
